@@ -14,7 +14,7 @@ def main(args):
     ips = []
     with open(args.f, 'r') as f:
         for line in f.readlines():
-            ip = re.findall(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}",line)
+            ip = re.findall(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b",line)
             if len(ip) > 0:
                 for i in ip:
                     ips.append(i)
